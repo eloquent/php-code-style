@@ -1,0 +1,28 @@
+{
+    "name": "eloquent/php-code-style",
+    "description": "The Eloquent code style definition for PHP.",
+    "keywords": ["code", "style", "definition"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Erin Millard",
+            "email": "ezzatron@gmail.com",
+            "homepage": "http://ezzatron.com/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Eloquent\\CodeStyle\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.4",
+        "phpstan/phpstan": "^0.11.19",
+        "friendsofphp/php-cs-fixer": "^2.16"
+    }
+}

@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+  pull_request:
+  schedule:
+  - cron: 0 14 * * 0 # Sunday 2PM UTC = Monday 12AM AEST
+jobs:
+  test:
+    name: Make
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v1
+      with:
+        php-version: 7.3
+        coverage: none
+      id: php
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Make
+      run: make ci

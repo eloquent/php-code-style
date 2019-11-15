@@ -1,5 +1,5 @@
 {
-    "name": "eloquent/php-code-style",
+    "name": "eloquent/code-style",
     "description": "The Eloquent code style definition for PHP.",
     "keywords": ["code", "style", "definition"],
     "license": "MIT",

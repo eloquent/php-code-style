@@ -2,7 +2,7 @@
 
 ## Installation
 
-    composer require --dev friendsofphp/php-cs-fixer eloquent/php-code-style
+    composer require --dev friendsofphp/php-cs-fixer eloquent/code-style
 
 ## Usage
 

@@ -6,7 +6,7 @@ Install dependencies:
 
     composer require --dev friendsofphp/php-cs-fixer eloquent/code-style
 
-Add a **.php_cs** file:
+Add a **.php-cs-fixer.php** file:
 
 ```php
 <?php return Eloquent\CodeStyle\Config::create(__DIR__);

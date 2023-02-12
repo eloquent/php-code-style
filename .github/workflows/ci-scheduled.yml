@@ -1,18 +1,9 @@
 name: CI (scheduled)
 on:
   schedule:
-  - cron: 0 14 * * 0 # Sunday 2PM UTC = Monday 12AM AEST
+    - cron: 0 14 * * 0 # Sunday 2PM UTC = Monday 12AM AEST
 jobs:
-  test:
-    name: Make
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: Set up PHP
-      uses: shivammathur/setup-php@master
-      with:
-        php-version: 7.3
-        coverage: none
-    - name: Make
-      run: make ci
+  CI:
+    name: CI
+    uses: ./.github/workflows/ci.yml
+    secrets: inherit

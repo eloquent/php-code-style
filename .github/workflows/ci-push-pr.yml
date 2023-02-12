@@ -1,0 +1,9 @@
+name: CI (push / PR)
+on:
+  push:
+  pull_request:
+jobs:
+  CI:
+    name: CI
+    uses: ./.github/workflows/ci.yml
+    secrets: inherit

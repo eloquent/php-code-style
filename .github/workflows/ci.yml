@@ -1,18 +1,20 @@
 name: CI
 on:
-  push:
-  pull_request:
+  workflow_call:
 jobs:
-  test:
-    name: Make
+  CI:
     runs-on: ubuntu-latest
+    name: CI
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: Set up PHP
-      uses: shivammathur/setup-php@master
-      with:
-        php-version: 7.3
-        coverage: none
-    - name: Make
-      run: make ci
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          extensions: mbstring
+          coverage: none
+      - name: Install dependencies
+        run: make vendor
+      - name: Make
+        run: make ci
